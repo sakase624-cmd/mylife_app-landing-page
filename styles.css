@@ -1,0 +1,483 @@
+/* ==========================================================================
+   MY LIFE — 共通スタイル
+   モチーフ：帳簿（家計簿・通帳）× 実印（ハンコ）
+   ========================================================================== */
+
+:root {
+  --paper: #EDEEE6;
+  --paper-deep: #E4E5DB;
+  --ink: #1B2A41;
+  --ink-soft: #4A5A70;
+  --stamp-red: #B03A2E;
+  --moss: #56705A;
+  --gold: #A9812F;
+  --line: rgba(27, 42, 65, 0.16);
+  --line-soft: rgba(27, 42, 65, 0.08);
+  --max-w: 880px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .stamp, .logo-text {
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 0.02em;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- 縫い目（ステッチ）ライン：帳簿の綴じ目モチーフ --- */
+.stitch {
+  height: 8px;
+  background-image: radial-gradient(circle, rgba(27, 42, 65, 0.35) 1.4px, transparent 1.6px);
+  background-size: 16px 8px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* --- ヘッダー --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--stamp-red);
+  color: var(--stamp-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  transform: rotate(-6deg);
+  flex-shrink: 0;
+}
+
+.brand-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.site-nav {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-color: var(--stamp-red);
+}
+
+/* --- ヒーロー --- */
+.hero {
+  padding: 72px 0 56px;
+}
+
+.hero-card {
+  background: #F6F6F0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eyebrow {
+  font-size: 13px;
+  color: var(--moss);
+  letter-spacing: 0.12em;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--moss);
+  display: inline-block;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4.6vw, 42px);
+  line-height: 1.5;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+
+.hero p.lead {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 46em;
+  margin: 0 0 32px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid var(--ink);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-primary:hover { background: #10192b; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.btn-ghost:hover { background: var(--line-soft); }
+
+.status-note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+/* --- タイムライン（人生の節目 スタンプ） --- */
+.section {
+  padding: 56px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.section-sub {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin: 0 0 40px;
+}
+
+.timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 46px;
+  left: 5%;
+  right: 5%;
+  height: 0;
+  border-top: 1px dashed var(--line);
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  position: relative;
+}
+
+.stamp {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--stamp-red);
+  color: var(--stamp-red);
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transform: rotate(-4deg);
+}
+
+.milestone:nth-child(even) .stamp { transform: rotate(5deg); }
+
+.milestone-label {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* --- 機能一覧（帳簿の明細行） --- */
+.ledger {
+  border-top: 1px solid var(--line);
+}
+
+.ledger-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ledger-num {
+  font-family: "Shippori Mincho", serif;
+  color: var(--gold);
+  font-size: 14px;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.ledger-body h3 {
+  font-size: 16px;
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+.ledger-body p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* --- シナリオカード --- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.scenario-card {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 22px;
+  background: #F6F6F0;
+}
+
+.scenario-card .tag {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--moss);
+  border: 1px solid var(--moss);
+  border-radius: 100px;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+}
+
+.scenario-card h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.scenario-card p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* --- プライバシー訴求 --- */
+.privacy-banner {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 4px;
+  padding: 40px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.privacy-banner .stamp {
+  border-color: var(--moss);
+  color: var(--moss);
+  background: var(--ink);
+}
+
+.privacy-banner h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.privacy-banner p {
+  margin: 0;
+  font-size: 14px;
+  color: #C9CFD8;
+  max-width: 50em;
+}
+
+/* --- フッター --- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 40px 0 32px;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+}
+.footer-links a:hover { border-color: var(--ink-soft); }
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-contact a { text-decoration: none; }
+.footer-contact a:hover { color: var(--ink); }
+
+/* --- 規約・プライバシーポリシー用の記事レイアウト --- */
+.article-header {
+  padding: 56px 0 24px;
+}
+
+.article-header h1 {
+  font-size: clamp(24px, 4vw, 32px);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.article-header .meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.article-body {
+  padding-bottom: 64px;
+}
+
+.article-body section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-body section:last-child { border-bottom: none; }
+
+.article-body h2 {
+  font-size: 17px;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.article-body h2 .no {
+  color: var(--gold);
+  font-family: "Shippori Mincho", serif;
+  font-size: 14px;
+}
+
+.article-body p, .article-body li {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+.article-body ul {
+  padding-left: 1.2em;
+  margin: 0 0 12px;
+}
+
+.article-body a.inline-link {
+  color: var(--stamp-red);
+  text-decoration: underline;
+}
+
+/* --- レスポンシブ --- */
+@media (max-width: 720px) {
+  .hero-card { padding: 32px 22px; }
+  .scenario-grid { grid-template-columns: 1fr; }
+  .timeline { flex-wrap: wrap; row-gap: 28px; }
+  .timeline::before { display: none; }
+  .milestone { flex: 0 0 30%; }
+  .privacy-banner { padding: 28px 22px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-contact { align-items: flex-start; text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
