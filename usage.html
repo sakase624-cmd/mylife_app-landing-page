@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使い方｜MY LIFE</title>
+<meta name="description" content="MY LIFEの基本的な使い方をご紹介します。収支リスト（ランニング・スポット）の入力方法や、資産・負債の登録方法、データの保存について解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">生</span>
+      <span class="brand-text logo-text">MY LIFE</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">アプリ紹介</a>
+      <a href="usage.html" aria-current="page">使い方</a>
+      <a href="terms.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+</header>
+
+<div class="stitch"></div>
+
+<main>
+  <div class="wrap">
+
+    <!-- ヒーロー -->
+    <section class="hero">
+      <div class="hero-card">
+        <p class="eyebrow">how to use</p>
+        <h1>はじめての方へ、<br>MY LIFEの<span style="white-space:nowrap;">使い方ガイド</span></h1>
+        <p class="lead">
+          MY LIFEは会員登録不要。プロフィールを登録したら、毎月の収支と現在の資産・負債を入力し、ライフイベントやシナリオで将来の家計を試算できます。ここでは、基本的な使い方の流れと、入力時に知っておきたい仕組みをご紹介します。
+        </p>
+        <p class="status-note">入力したデータはすべて端末内に保存され、サーバーへ送信されることはありません。詳しくは<a href="privacy.html" style="text-decoration:underline;">プライバシーポリシー</a>をご覧ください。</p>
+      </div>
+    </section>
+
+    <!-- 基本の流れ -->
+    <section class="section">
+      <h2 class="section-title">基本の流れ</h2>
+      <p class="section-sub">大きく4つのステップで、家計の今と将来を記録・試算していきます。</p>
+
+      <div class="timeline">
+        <div class="milestone">
+          <div class="stamp">1</div>
+          <div class="milestone-label">プロフィールの<br>登録</div>
+        </div>
+        <div class="milestone">
+          <div class="stamp">2</div>
+          <div class="milestone-label">収支リストの<br>入力</div>
+        </div>
+        <div class="milestone">
+          <div class="stamp">3</div>
+          <div class="milestone-label">資産・負債の<br>入力</div>
+        </div>
+        <div class="milestone">
+          <div class="stamp">4</div>
+          <div class="milestone-label">ライフイベント／<br>シナリオで試算</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 収支リストの基本 -->
+    <section class="section">
+      <h2 class="section-title">収支リストの基本：ランニングとスポット</h2>
+      <p class="section-sub">収入・支出は、発生のしかたによって「ランニング」と「スポット」の2種類で登録します。</p>
+
+      <div class="scenario-grid">
+        <div class="scenario-card">
+          <span class="tag">毎月継続</span>
+          <h3>ランニング</h3>
+          <p>給与や家賃など、毎月継続して発生する収入・支出です。開始年月から終了年月まで、毎月同じ金額が自動的に計上されます。終了年月は日付指定のほか、「退職年月」や「100歳になる年月」を基準にすることもできます。</p>
+        </div>
+        <div class="scenario-card">
+          <span class="tag">特定の年月</span>
+          <h3>スポット</h3>
+          <p>ボーナスや旅行費用など、特定の年月にのみ発生する収入・支出です。発生年月を指定すると、その月だけに計上されます。</p>
+        </div>
+      </div>
+
+      <div class="ledger" style="margin-top:18px">
+        <div class="ledger-row">
+          <span class="ledger-num">※</span>
+          <div class="ledger-body">
+            <h3>スポットの「繰り返し」について</h3>
+            <p>
+              スポットの登録時に「次年以降も同月にSpot登録する」をONにすると、発生年月と同じ月に、毎年繰り返して計上されるようになります（終了年月（Spot繰り返し）まで）。繰り返しの単位は「毎年・同じ月」のみで、「3ヶ月ごと」のように任意の間隔を指定する機能はありません。年に一度だけ発生する費用（固定資産税や保険料の一括払いなど）を毎年登録し直す手間を省くための機能です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 資産・負債の入力について -->
+    <section class="section">
+      <h2 class="section-title">資産・負債の入力について</h2>
+      <p class="section-sub">資産・負債は、収支とは異なる「上書き」方式で管理します。</p>
+
+      <div class="ledger">
+        <div class="ledger-row">
+          <span class="ledger-num">01</span>
+          <div class="ledger-body">
+            <h3>スナップショット（残高の記録）</h3>
+            <p>銀行口座や金融資産などの残高は、入力した年月時点の金額をそのまま記録する「スナップショット」です。次に金額を更新すると、新しい値で上書きされます。更新月と更新月の間は、直前に入力した金額がそのまま続くものとして扱われます。</p>
+          </div>
+        </div>
+        <div class="ledger-row">
+          <span class="ledger-num">02</span>
+          <div class="ledger-body">
+            <h3>収支との違い</h3>
+            <p>収支（ランニング・スポット）は毎月の増減を積み上げて記録していくのに対し、資産・負債は「今いくらあるか」という時点の値を更新していく点が異なります。定期的に残高を確認し、最新の金額に更新することをおすすめします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プライバシー訴求 -->
+    <section class="section">
+      <div class="privacy-banner">
+        <div class="stamp">安</div>
+        <div>
+          <h3>入力データは、あなたの端末の中だけに。</h3>
+          <p>
+            プロフィールや収支・資産データなどの入力情報は、すべてお使いの端末内にのみ保存されます。運営者のサーバーへ個人データが送信されることはありません。詳しくは<a href="privacy.html" style="color:#fff;text-decoration:underline;">プライバシーポリシー</a>をご覧ください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="usage.html">使い方</a>
+      <a href="terms.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+    <div class="footer-contact">
+      <span>お問い合わせ：<a href="mailto:1step.stride@gmail.com">1step.stride@gmail.com</a></span>
+      <span>使い方のご紹介は <a href="https://x.com/1step_stride" target="_blank" rel="noopener">X（@1step_stride）</a> でも行っています</span>
+      <span>&copy; 2026 MY LIFE</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
